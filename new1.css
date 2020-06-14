@@ -20,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 70px;
 }
 .menu-items li {
     display: inline-block;
@@ -31,18 +31,27 @@
     font-size: 18px;
     padding: 0 20px 0 0;
     transition: all 0.5s;
+    
 }
 
-.fas{
+.fa-spa{
     font-size: 30px;
     transition: background,filter 0.5s;
     transition: font-size 0.3s;
+}
+.fa-bars, .fa-times-circle{
+    font-size: 30px;
+    display: none;
+}
+.hamburger{
+    color: #000;
+    display: none;
 }
 /*--------------navbar-hover----------------------*/
 .menu-items li a:hover{
     color:#fff;
 }
-.fas:hover {
+.fa-spa:hover {
     color: aquamarine; 
     z-index: 1;
     filter: blur(0.5px);
@@ -74,3 +83,80 @@
     font-weight: 500;
     border-radius: 20px;
 }
+
+/*-------------------------media-quiries--------------------------*/
+
+@media screen and (max-width: 900px){
+    .header-wrap{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:600px){
+    /*--------------navbar---------------------*/
+    .menu-items{
+        text-align: center;
+        position: fixed;
+        top: 0;
+        right: -290px;
+        bottom: 0;
+        width: 290px;
+        background: #fff;
+        padding: 120px 0;
+        transition: all 1s ease;
+    }
+    .menu-items li {
+        background: white;
+        display: block;
+        margin: 10px 0;
+    }
+    .menu-items li a{
+        font-size: 30px;
+        display: block;
+        background: rgb(255, 255, 255);
+        color: rgb(114, 112, 112);
+        transition: color 500ms ease;
+    }
+    .menu-items li a:hover{
+        color: #000;
+
+    }
+    .fa-times-circle{
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        font-size: 25px;
+        display: block;
+        color: #000;
+        background-color: #fff;
+    }
+    .hamburger {
+        display: block;
+    }
+    .hamburger i{ 
+        display: block;
+        color: #fff;
+        font-size: 25px;
+    }
+    /*----------------main-header--------------------*/
+    .main-header{
+        justify-content: center;
+    }
+    .main-header-box{
+        text-align: center;
+        width: 100%;
+    }
+    .main-header-box a{
+        padding: 10px 60px;
+    }
+}
+@media screen and (max-width: 350px){
+    .main-header-box a{
+        padding: 10px 40px;
+    }
+}
+@media screen and (max-width: 270px){
+    .main-header-box a{
+        padding: 10px 5px;
+    }
+}  
